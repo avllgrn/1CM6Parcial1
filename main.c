@@ -5,24 +5,86 @@ float sumaDosNumeros(float x, float y);
 float calculaAreaRectangulo(float b, float h);
 float calculaPerimetroRectangulo(float b, float h);
 
-int main(void){
-	float base, altura,area,perimetro;
-	//1.Pide datos
-	printf("Ingresa base ");
-	scanf("%f",&base);
-	printf("Ingresa altura ");
-	scanf("%f",&altura);
 
-	area = calculaAreaRectangulo(base, altura);
-	perimetro = calculaPerimetroRectangulo(base, altura);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+float calculaX1(float a, float b, float c);
+float calculaX2(float a, float b, float c);
+
+int main(void){
+	float a,b,c,x1,x2;
+	//1.Pide datos
+	printf("Ingresa a ");
+	scanf("%f",&a);
+	printf("Ingresa b ");
+	scanf("%f",&b);
+	printf("Ingresa c ");
+	scanf("%f",&c);
+
+    x1=calculaX1(a,b,c);
+    x2=calculaX2(a,b,c);
 
 	//3.Muestra resultado
-	printf("base = %f\n",base);
-	printf("altura = %f\n",altura);
-	printf("area = %f\n",area);
-	printf("perimetro = %f\n",perimetro);
+	printf("x1 = %f\n",x1);
+	printf("x2 = %f\n",x2);
+
     return 0;
 }
+float calculaX1(float a, float b, float c){
+    float x1;
+    x1 = (-b+sqrt(pow(b,2)-4*a*c))/(2*a);
+    return x1;
+}
+float calculaX2(float a, float b, float c){
+    float x2;
+    x2 = (-b-sqrt(pow(b,2)-4*a*c))/(2*a);
+    return x2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 float sumaDosNumeros(float x, float y){
     float z;
